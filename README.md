@@ -1,5 +1,43 @@
 # MMAI
 
+bash:
+1. Virtuelle Umgebung erstellen:
+    python -m venv .venv
+2. .venv\Scripts\activate  (mac: source .venv/bin/activate)
+
+3. Abhängigkeiten installieren
+    pip install tensorflow fastapi uvicorn pillow numpy python-multipart
+    pip install scikit-learn
+
+4. NDJSON → Bilder konvertieren
+    cd backend
+    python convert_ndjson_to_png.py
+
+5. KI trainieren
+    python train_model.py
+
+6. Backend starten (FastAPI)
+    uvicorn main:app --reload --port 8001
+
+Test (optional):
+    Browser öffnen:
+    http://127.0.0.1:8001/docs
+
+7. Frontend starten
+    frontend/index.html
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
