@@ -38,9 +38,6 @@ Test (optional):
 
 
 
-
-
-
 Musste neu trainieren, weil es immer alles als string bean gesehen hat, hab dann string bean gelöscht
 
 ebenfalls falsche daten benutzt, die nicht nur das bild sondern auch viel freiraum hatten.

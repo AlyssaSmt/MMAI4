@@ -21,3 +21,7 @@ datasets/
 
 # FastAPI Uvicorn Logs
 *.log
+
+# NDJSON explizit ERLAUBEN 
+!backend/data/ndjson/
+!backend/data/ndjson/*.ndjson
