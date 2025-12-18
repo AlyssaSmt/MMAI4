@@ -7,6 +7,8 @@ from PIL import Image
 from fastapi import FastAPI, Form
 from fastapi.middleware.cors import CORSMiddleware
 import tensorflow as tf
+from clip_caption import caption_from_base64
+
 
 # =========================
 # Parameter
@@ -106,4 +108,19 @@ async def predict(image_base64: str = Form(...)):
         "prediction": results[0]["label"],
         "confidence": results[0]["confidence"],
         "top": results
+    }
+
+from fastapi import Form
+
+@app.post("/caption")
+async def caption(image_base64: str = Form(...)):
+    top = caption_from_base64(image_base64, top_k=3)
+    best = top[0]
+    return {
+        "caption": best["caption"],
+        "confidence": round(best["confidence"], 3),
+        "top": [
+            {"caption": r["caption"], "confidence": round(r["confidence"], 3)}
+            for r in top
+        ],
     }

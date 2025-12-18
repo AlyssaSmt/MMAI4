@@ -8,6 +8,10 @@ bash:
 3. Abhängigkeiten installieren
     pip install tensorflow fastapi uvicorn pillow numpy python-multipart
     pip install scikit-learn
+    pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+    pip install ftfy regex tqdm
+    pip install git+https://github.com/openai/CLIP.git
+
 
 4. NDJSON → Bilder konvertieren
     cd backend
