@@ -21,6 +21,7 @@ bash:
     python train_model.py
 
 6. Backend starten (FastAPI)
+    cd backend
     uvicorn main:app --reload --port 8001
 
 Test (optional):
@@ -30,6 +31,11 @@ Test (optional):
 7. Frontend starten
     frontend/index.html
 
+
+
+open vocabulary
+ganze clip library verwenden
+website verbessern, das es genauer/verständlicher ist
 
 
 
