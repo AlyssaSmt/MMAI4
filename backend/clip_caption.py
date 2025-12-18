@@ -16,6 +16,14 @@ CAPTIONS = [
     "a simple sketch of pants",
     "a simple sketch of a strawberry",
     "a simple sketch of a wine glass",
+# 2) Neue Captions
+    "a simple sketch of a cow",
+    "a simple sketch of a person",
+    "a simple sketch of a phone",
+    "a simple sketch of a bicycle",
+    "a simple sketch of a fish",
+    "a simple sketch of a guitar",
+    "a simple sketch of a chair",
 ]
 
 _device = "cuda" if torch.cuda.is_available() else "cpu"
