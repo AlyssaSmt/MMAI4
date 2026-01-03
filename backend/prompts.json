@@ -1,0 +1,18 @@
+{
+  "templates": [
+    "a simple black and white sketch of a {}",
+    "a hand drawn doodle of a {}",
+    "a simple line drawing of a {}",
+    "a child's drawing of a {}"
+  ],
+  "concepts": [
+    "cat","dog","cow","horse","bird","fish",
+    "person","face","hand","eye","leg",
+    "car","bicycle","bus","truck",
+    "phone","chair","table","cup",
+    "house","tree","flower",
+    "apple","banana","pizza",
+    "circle","square","triangle",
+    "guitar","clock","camera"
+  ]
+}

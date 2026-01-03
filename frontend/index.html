@@ -2,89 +2,30 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <title>Montagsmaler KI</title>
+  <title>🎨 Open-Vocabulary Drawing AI</title>
   <link rel="stylesheet" href="style.css" />
-
-  <!-- Mini-CSS für Galerie (kann auch in style.css) -->
-  <style>
-    .layout {
-      display: flex;
-      gap: 30px;
-      align-items: flex-start;
-    }
-
-    .left {
-      flex: 0 0 auto;
-    }
-
-    .right {
-      flex: 1;
-    }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, 80px);
-      gap: 10px;
-    }
-
-    .gallery img {
-      width: 80px;
-      height: 80px;
-      background: white;
-      border: 1px solid #ccc;
-    }
-  </style>
 </head>
 
 <body>
-  <h1>🎨 Montagsmaler mit KI</h1>
+  <h1>🎨 Zeichne irgendwas</h1>
+  <p>Die KI versucht zu erraten, was du gezeichnet hast</p>
 
-  <p>
-    <strong>Zeichne:</strong>
-    <span id="target-word">–</span>
-  </p>
+  <canvas id="canvas" width="400" height="400"></canvas>
 
-  <!-- ================= Layout ================= -->
-  <div class="layout">
+  <div class="buttons">
+    <button id="clear">🧹 Löschen</button>
+    <button id="predict">🤖 Erraten</button>
+  </div>
 
-    <!-- ===== Linke Seite: Canvas + Steuerung ===== -->
-    <div class="left">
-      <canvas id="canvas" width="400" height="400"></canvas>
+  <div id="result">
+    <h3>📝 Beschreibung (OpenCLIP)</h3>
+    <p>
+      <span id="caption">–</span>
+      (<span id="confidence">–</span>)
+    </p>
 
-      <div class="buttons">
-        <button id="clear">🧹 Löschen/neue Kategorie</button>
-        <button id="predict">🤖 KI raten lassen</button>
-        <button id="pen-btn">✏️ Stift</button>
-        <button id="eraser-btn">🧽 Radiergummi</button>
-      </div>
-
-
-      <div id="result">
-        <h3>🤖 KI-Vermutung</h3>
-        <button id="save-btn" style="display:none;">
-          💾 Bild speichern
-        </button>
-        <h3> Caption (CLIP)</h3>
-        <p><strong>Beschreibung:</strong> <span id="caption-text">–</span> (<span id="caption-conf">–</span>)</p>
-        <ul id="caption-top"></ul>
-        <p>
-          <strong>Top-1:</strong>
-          <span id="prediction">–</span>
-          (<span id="confidence">–</span>)
-        </p>
-
-        <h4>Weitere Vorschläge</h4>
-        <ul id="top-list"></ul>
-      </div>
-    </div>
-
-    <!-- ===== Rechte Seite: Galerie ===== -->
-    <div class="right">
-      <h3>✅ Richtig erkannt</h3>
-      <p>Diese Zeichnungen wurden von der KI korrekt erkannt:</p>
-      <div id="gallery" class="gallery"></div>
-    </div>
-
+    <h4>Weitere Vermutungen</h4>
+    <ul id="top"></ul>
   </div>
 
   <script src="script.js"></script>

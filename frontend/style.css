@@ -1,161 +1,38 @@
-/* ======================
-   DARK MODE – Grundlayout
-====================== */
 body {
+  background: #0f172a;
+  color: #e5e7eb;
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 20px;
-  background: #0f172a;        /* dunkles Blau-Grau */
-  color: #e5e7eb;             /* helles Grau */
-}
-
-/* ======================
-   Überschriften & Text
-====================== */
-h1 {
   text-align: center;
-  margin-bottom: 10px;
-  color: #f8fafc;
-}
-
-p {
-  text-align: center;
-  font-size: 18px;
-  color: #cbd5f5;
-}
-
-/* ======================
-   Layout
-====================== */
-.layout {
-  display: flex;
-  gap: 30px;
-  align-items: flex-start;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-/* ======================
-   Cards (Container)
-====================== */
-.left,
-.right {
-  background: #020617;        /* fast schwarz, aber weich */
-  border-radius: 12px;
   padding: 20px;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
 }
 
-/* ======================
-   Canvas
-====================== */
 canvas {
+  background: white;
   border: 2px solid #334155;
-  background: white;          /* Zeichnen bleibt klar */
-  cursor: crosshair;
+  margin: 20px auto;
   display: block;
-  margin: 0 auto;
+  cursor: crosshair;
 }
 
-/* ======================
-   Buttons
-====================== */
-.buttons {
-  text-align: center;
-  margin: 15px 0;
-}
-
-button {
-  padding: 10px 16px;
-  margin: 6px;
-  font-size: 15px;
+.buttons button {
+  padding: 10px 14px;
+  margin: 5px;
   border-radius: 6px;
   border: none;
-  cursor: pointer;
-  background: #2563eb;        /* blau */
+  background: #2563eb;
   color: white;
+  cursor: pointer;
 }
 
-button:hover {
+.buttons button:hover {
   background: #1d4ed8;
 }
 
-#clear {
-  background: #475569;
-}
-
-#clear:hover {
-  background: #334155;
-}
-
-#save-btn {
-  background: #16a34a;
-}
-
-#save-btn:hover {
-  background: #15803d;
-}
-
-/* ======================
-   Ergebnis
-====================== */
 #result {
-  margin-top: 10px;
-  font-size: 16px;
+  margin-top: 20px;
 }
 
-/* ======================
-   Galerie
-====================== */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, 80px);
-  gap: 12px;
-  margin-top: 10px;
-}
-
-.gallery-item {
-  position: relative;
-  width: 80px;
-  height: 80px;
-}
-
-.gallery-item img {
-  width: 80px;
-  height: 80px;
-  background: white;
-  border-radius: 6px;
-  border: 1px solid #334155;
-  object-fit: contain;
-}
-
-/* ======================
-   Delete Button
-====================== */
-.gallery-item button {
-  position: absolute;
-  top: -6px;
-  right: -6px;
-  border: none;
-  background: #dc2626;
-  color: white;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  font-size: 12px;
-  line-height: 20px;
+ul {
+  list-style: none;
   padding: 0;
-}
-
-.gallery-item button:hover {
-  background: #b91c1c;
-}
-
-/* ======================
-   Rechte Seite Text
-====================== */
-.right p {
-  font-size: 14px;
-  color: #94a3b8;
 }
