@@ -1,5 +1,4 @@
 # for loading and processing vocabularies for OpenCLIP
-# not used anymore in the current version, but kept for reference
 
 from pathlib import Path
 

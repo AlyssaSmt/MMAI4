@@ -38,34 +38,35 @@ Dieses Projekt nutzt **Open-Vocabulary-Erkennung** mit **OpenCLIP**:
 
 Zusatzfeatures:
 - **Live-Prediction** ist bewusst gedrosselt, da OpenCLIP pro Vorhersage viele Textvergleiche berechnet.
-- Eine **Confidence-Ampel (🔴🟡🟢)** visualisiert die Unsicherheit.
 - Ein **Prompt-Wort** wird zufällig aus dem Vokabular gewählt und dient nur als Zeichenhilfe (nicht als feste Klasse).
 
 ---
 
 ## bash:
 
-### 1. Virtuelle Umgebung erstellen
+### 1. Virtuelle Umgebung erstellen und starten
 ```bash
 python -m venv .venv
+.venv\Scripts\activate  (mac: source .venv/bin/activate)
+```
 
-### 2. .venv\Scripts\activate  (mac: source .venv/bin/activate)
+### 2. Abhängigkeiten installieren
+```
+pip install -r requirements.txt
+```
 
-### 3. Abhängigkeiten installieren
-
-    pip install -r requirements.txt
-
-
-### 4. Backend starten (FastAPI)
-
-    uvicorn backend.main:app --reload --port 8001
-
+### 3. Backend starten (FastAPI)
+```
+uvicorn backend.main:app --reload --port 8001
+```
 Test (optional):
     Browser öffnen:
     http://127.0.0.1:8001/docs
 
-### 5. Frontend starten
-    frontend/index.html
+### 4. Frontend starten
+```
+frontend/index.html
+```
 
 
 

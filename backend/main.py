@@ -17,11 +17,11 @@ import random
 BASE_DIR = Path(__file__).resolve().parent
 VOCAB_PATH = BASE_DIR.parent / "categories.txt"  # <- deine Open-Vocab-Liste
 
-# ⚠️ Tipp: für Stabilität erstmal begrenzen
+#  Tipp: für Stabilität erstmal begrenzen
 # später kannst du vocab_limit=None setzen
 clip_model = OpenVocabCLIP(
     vocab_path=VOCAB_PATH,
-    vocab_limit=500 # Startwert
+    vocab_limit=500 # Startwert; ändere das nach Belieben
 )
 
 # =====================================================

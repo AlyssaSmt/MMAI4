@@ -16,7 +16,7 @@ TOP_K = 5
 # =========================
 # Vocabulary laden
 # =========================
-VOCAB_PATH = Path(__file__).parent / "vocab.txt"
+VOCAB_PATH = Path(__file__).parent / "categories.txt"
 VOCAB = [line.strip() for line in VOCAB_PATH.read_text().splitlines() if line.strip()]
 
 # =========================
