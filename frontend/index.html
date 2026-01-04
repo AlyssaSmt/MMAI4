@@ -7,25 +7,49 @@
 </head>
 
 <body>
-  <h1>🎨 Zeichne irgendwas</h1>
-  <p>Die KI versucht zu erraten, was du gezeichnet hast</p>
+  <h1>🎨 Draw anything!</h1>
+  <p>The AI tries to guess what you've drawn</p>
+  <p id="draw-prompt">
+  ✏️ Draw e.g.: <strong><span id="prompt-word">–</span></strong>
+</p>
 
-  <canvas id="canvas" width="400" height="400"></canvas>
 
-  <div class="buttons">
-    <button id="clear">🧹 Löschen</button>
-    <button id="predict">🤖 Erraten</button>
-  </div>
+  <div class="layout">
+    <!-- LINKS -->
+    <div class="left">
+      <canvas id="canvas" width="400" height="400"></canvas>
 
-  <div id="result">
-    <h3>📝 Beschreibung (OpenCLIP)</h3>
-    <p>
-      <span id="caption">–</span>
-      (<span id="confidence">–</span>)
-    </p>
+      <div class="buttons">
+        <button id="clear">🧹 Delete</button>
+        <button id="predict">🤖 Predict</button>
+        <button id="toggle-live">👁 Live: ON</button>
+        <button id="shuffle-word">🎲 New Word</button>
+        <button id="eraser">🧽 Radiergummi</button>
+        <button id="save" style="display:none;">💾 Save</button>
+      </div>
 
-    <h4>Weitere Vermutungen</h4>
-    <ul id="top"></ul>
+      <div id="result">
+        <p>
+          Prompt vs. KI:
+          <strong><span id="match-status">–</span></strong>
+        </p>
+        <h3>📝 Top Prediction</h3>
+        <p>
+          <span id="caption">–</span>
+          (<span id="confidence">–</span>)
+        </p>
+
+        <h4>Further Predictions</h4>
+        <ul id="top"></ul>
+
+      </div>
+    </div>
+
+    <!-- RECHTS -->
+    <div class="right">
+      <h3>✅ Saved Drawings</h3>
+      <div id="gallery" class="gallery"></div>
+    </div>
   </div>
 
   <script src="script.js"></script>

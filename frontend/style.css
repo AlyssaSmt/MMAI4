@@ -36,3 +36,43 @@ ul {
   list-style: none;
   padding: 0;
 }
+
+/* ===== NUR Positionierung ===== */
+.layout {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.left {
+  flex: 0 0 auto;   /* Zeichenbereich links */
+}
+
+.right {
+  flex: 0 0 auto;   /* Galerie rechts */
+}
+
+
+.gallery-item img {
+  height: 100px;    
+}
+
+.gallery {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 10px;
+  border: 2px solid #334155;
+  background: #1e293b;
+}
+
+.gallery-delete {
+  background: rgba(220, 38, 38, 0.85);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 2px 6px;
+}

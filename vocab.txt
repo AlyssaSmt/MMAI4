@@ -1,0 +1,764 @@
+# =========================
+# Animals (land)
+# =========================
+cat
+dog
+puppy
+kitten
+horse
+pony
+cow
+bull
+calf
+sheep
+lamb
+goat
+pig
+boar
+chicken
+hen
+rooster
+duck
+goose
+turkey
+rabbit
+hare
+hamster
+guinea pig
+mouse
+rat
+squirrel
+chipmunk
+beaver
+otter
+fox
+wolf
+coyote
+bear
+panda
+koala
+lion
+tiger
+leopard
+cheetah
+jaguar
+elephant
+rhino
+hippo
+giraffe
+zebra
+camel
+llama
+alpaca
+monkey
+ape
+gorilla
+chimpanzee
+orangutan
+kangaroo
+wallaby
+deer
+moose
+elk
+reindeer
+antelope
+buffalo
+bison
+yak
+donkey
+mule
+skunk
+raccoon
+badger
+hedgehog
+porcupine
+armadillo
+sloth
+
+# =========================
+# Animals (water)
+# =========================
+fish
+goldfish
+shark
+whale
+dolphin
+porpoise
+octopus
+squid
+cuttlefish
+jellyfish
+starfish
+seahorse
+crab
+lobster
+shrimp
+prawn
+snail
+clam
+oyster
+mussel
+eel
+ray
+stingray
+manta ray
+tuna
+salmon
+trout
+cod
+sardine
+anchovy
+pufferfish
+catfish
+
+# =========================
+# Animals (insects & small)
+# =========================
+ant
+bee
+wasp
+hornet
+butterfly
+moth
+caterpillar
+beetle
+ladybug
+dragonfly
+grasshopper
+cricket
+cockroach
+termite
+mosquito
+fly
+spider
+tarantula
+scorpion
+tick
+worm
+earthworm
+snail
+slug
+
+# =========================
+# Food (fruit)
+# =========================
+apple
+banana
+orange
+lemon
+lime
+grapefruit
+pear
+peach
+plum
+apricot
+nectarine
+cherry
+grape
+strawberry
+raspberry
+blueberry
+blackberry
+cranberry
+watermelon
+melon
+cantaloupe
+honeydew
+pineapple
+mango
+papaya
+kiwi
+fig
+pomegranate
+coconut
+avocado
+date
+olive
+
+# =========================
+# Food (vegetables)
+# =========================
+carrot
+broccoli
+cauliflower
+cabbage
+lettuce
+spinach
+kale
+onion
+garlic
+potato
+sweet potato
+tomato
+cucumber
+zucchini
+eggplant
+pepper
+chili
+corn
+pea
+bean
+lentil
+chickpea
+radish
+beet
+turnip
+parsnip
+leek
+celery
+pumpkin
+squash
+asparagus
+mushroom
+
+# =========================
+# Food (meals & sweets)
+# =========================
+pizza
+burger
+cheeseburger
+sandwich
+hotdog
+taco
+burrito
+wrap
+fries
+chips
+nachos
+pasta
+spaghetti
+lasagna
+noodles
+rice
+sushi
+ramen
+soup
+stew
+salad
+cake
+cupcake
+muffin
+cookie
+donut
+brownie
+pie
+waffle
+pancake
+crepe
+ice cream
+ice pop
+chocolate
+candy
+lollipop
+
+# =========================
+# Objects (household)
+# =========================
+cup
+mug
+glass
+bottle
+plate
+bowl
+fork
+knife
+spoon
+pan
+pot
+kettle
+toaster
+microwave
+oven
+fridge
+freezer
+sink
+tap
+chair
+table
+desk
+bed
+pillow
+blanket
+sofa
+couch
+armchair
+stool
+lamp
+light bulb
+candle
+clock
+watch
+calendar
+mirror
+frame
+picture
+vase
+rug
+carpet
+curtain
+blind
+shelf
+drawer
+cabinet
+wardrobe
+
+# =========================
+# Objects (electronics)
+# =========================
+phone
+smartphone
+tablet
+computer
+laptop
+keyboard
+mouse
+monitor
+screen
+printer
+scanner
+camera
+webcam
+speaker
+headphones
+earbuds
+microphone
+remote
+game controller
+console
+router
+modem
+charger
+cable
+plug
+socket
+battery
+
+# =========================
+# Objects (personal)
+# =========================
+book
+notebook
+magazine
+newspaper
+pen
+pencil
+marker
+eraser
+ruler
+scissors
+tape
+glue
+backpack
+bag
+handbag
+wallet
+purse
+key
+keychain
+lock
+umbrella
+sunglasses
+glasses
+watch strap
+hat
+cap
+helmet
+mask
+
+# =========================
+# Vehicles
+# =========================
+car
+sedan
+hatchback
+wagon
+suv
+van
+minivan
+truck
+pickup
+bus
+school bus
+coach
+tram
+subway
+train
+locomotive
+wagon
+bicycle
+mountain bike
+road bike
+scooter
+motorcycle
+moped
+skateboard
+roller skates
+rollerblades
+airplane
+jet
+propeller plane
+helicopter
+glider
+hot air balloon
+rocket
+spaceship
+boat
+ship
+ferry
+sailboat
+yacht
+canoe
+kayak
+submarine
+tractor
+bulldozer
+excavator
+crane
+forklift
+fire truck
+police car
+ambulance
+
+# =========================
+# Nature
+# =========================
+tree
+oak
+pine
+fir
+palm tree
+bush
+shrub
+grass
+flower
+rose
+tulip
+sunflower
+daisy
+lily
+orchid
+leaf
+branch
+root
+forest
+jungle
+park
+garden
+mountain
+hill
+cliff
+valley
+canyon
+river
+stream
+lake
+pond
+waterfall
+ocean
+sea
+beach
+shore
+island
+volcano
+lava
+rock
+stone
+pebble
+sand
+dune
+cloud
+rain
+snow
+hail
+storm
+lightning
+rainbow
+sun
+moon
+star
+planet
+
+# =========================
+# Buildings & places
+# =========================
+house
+hut
+cabin
+apartment
+building
+skyscraper
+tower
+castle
+palace
+church
+chapel
+mosque
+temple
+school
+university
+library
+hospital
+clinic
+pharmacy
+shop
+store
+market
+supermarket
+mall
+restaurant
+cafe
+bakery
+bar
+hotel
+motel
+hostel
+factory
+warehouse
+garage
+barn
+shed
+bridge
+tunnel
+road
+street
+highway
+crosswalk
+traffic light
+traffic sign
+bus stop
+train station
+airport
+harbor
+stadium
+arena
+playground
+park bench
+fountain
+
+# =========================
+# Body parts
+# =========================
+head
+face
+hair
+eye
+eyebrow
+eyelash
+nose
+mouth
+lip
+tooth
+tongue
+ear
+neck
+shoulder
+arm
+elbow
+wrist
+hand
+palm
+finger
+thumb
+nail
+chest
+back
+waist
+hip
+leg
+thigh
+knee
+shin
+ankle
+foot
+heel
+toe
+heart
+lungs
+brain
+
+# =========================
+# Clothing
+# =========================
+shirt
+tshirt
+tank top
+blouse
+sweater
+hoodie
+jacket
+coat
+vest
+pants
+jeans
+shorts
+skirt
+dress
+suit
+tie
+belt
+scarf
+shawl
+hat
+cap
+beanie
+glove
+mitten
+sock
+stocking
+shoe
+sneaker
+boot
+sandal
+flip flop
+high heel
+backpack
+purse
+
+# =========================
+# Tools & hardware
+# =========================
+hammer
+mallet
+screwdriver
+wrench
+pliers
+saw
+handsaw
+chainsaw
+drill
+bit
+nail
+screw
+bolt
+nut
+tape measure
+level
+clamp
+vise
+ladder
+rope
+chain
+hook
+shovel
+spade
+rake
+hoe
+axe
+pickaxe
+wheelbarrow
+bucket
+broom
+mop
+dustpan
+paintbrush
+roller
+paint can
+
+# =========================
+# Toys & games
+# =========================
+ball
+football
+soccer ball
+basketball
+baseball
+tennis ball
+volleyball
+golf ball
+bowling ball
+bat
+racket
+net
+goal
+dice
+domino
+chessboard
+chess piece
+checker
+card
+playing card
+board game
+puzzle
+jigsaw
+toy car
+toy train
+toy airplane
+teddy bear
+stuffed animal
+doll
+action figure
+robot
+yo yo
+kite
+frisbee
+balloon
+
+# =========================
+# Musical instruments
+# =========================
+guitar
+acoustic guitar
+electric guitar
+bass guitar
+ukulele
+banjo
+mandolin
+violin
+viola
+cello
+double bass
+harp
+piano
+keyboard instrument
+synthesizer
+organ
+accordion
+drum
+drum set
+snare drum
+bass drum
+cymbal
+tambourine
+maraca
+xylophone
+flute
+recorder
+clarinet
+oboe
+saxophone
+trumpet
+trombone
+tuba
+horn
+microphone
+music stand
+
+# =========================
+# Shapes & symbols
+# =========================
+circle
+oval
+square
+rectangle
+triangle
+diamond
+pentagon
+hexagon
+octagon
+star shape
+heart shape
+arrow
+cross
+plus sign
+minus sign
+checkmark
+x mark
+question mark
+exclamation mark
+smiley
+sad face
+emoji
+number
+digit
+letter
+alphabet

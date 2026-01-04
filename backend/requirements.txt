@@ -1,20 +1,15 @@
-# --- KI / Machine Learning ---
-tensorflow==2.17.0
-numpy==1.26.4
-scikit-learn==1.4.2
+# Core ML
+torch
+torchvision
+open_clip_torch
 
-# --- Bildverarbeitung ---
-Pillow==10.3.0
+# Backend
+fastapi
+uvicorn
 
-# --- Backend API ---
-fastapi==0.111.0
-uvicorn==0.29.0
+# Image handling
+pillow
 
-# --- QuickDraw Tools (Hilfsbibliothek) ---
-quickdraw==0.2.0
-
-# Optional: nützlich für spätere Schritte
-python-multipart==0.0.7
-
-
+# Utils
+numpy
 python-multipart
