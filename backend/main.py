@@ -15,13 +15,11 @@ import random
 # =====================================================
 
 BASE_DIR = Path(__file__).resolve().parent
-VOCAB_PATH = BASE_DIR.parent / "categories.txt"  # <- deine Open-Vocab-Liste
+VOCAB_PATH = BASE_DIR.parent / "vocab.txt"  #Open-Vocab-Liste, kann angepasst werden
 
-#  Tipp: für Stabilität erstmal begrenzen
-# später kannst du vocab_limit=None setzen
 clip_model = OpenVocabCLIP(
     vocab_path=VOCAB_PATH,
-    vocab_limit=500 # Startwert; ändere das nach Belieben
+    vocab_limit=1000 # Startwert
 )
 
 # =====================================================
@@ -155,7 +153,6 @@ async def caption(
 
     best = results[0]
 
-    # 🔍 Unsicherheits-Schwelle (sehr wichtig für Open Vocabulary!)
     if best["confidence"] < 0.04:
         return {
             "caption": "I am not sure what this is",
@@ -177,7 +174,7 @@ async def caption(
 
 
 # =====================================================
-# Optional: Alias für Debug / Tests
+# Debug / Tests
 # =====================================================
 
 @app.post("/open_vocab")

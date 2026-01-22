@@ -34,12 +34,11 @@ let lastTop = [];
 let drawing = false;
 let currentPromptWord = null;
 
-let drawMode = "pen"; // "pen" | "eraser"
+let drawMode = "pen";
 
 // ---------------- Canvas Setup ----------------
 ctx.lineCap = "round";
 
-// Stift / Radierer
 function setPen() {
   drawMode = "pen";
   ctx.globalCompositeOperation = "source-over";
@@ -50,10 +49,9 @@ function setPen() {
 function setEraser() {
   drawMode = "eraser";
   ctx.globalCompositeOperation = "destination-out";
-  ctx.lineWidth = 24; // Radiergummi-Größe
+  ctx.lineWidth = 24;
 }
 
-// Standard: Stift aktiv
 setPen();
 
 // ---------------- Helpers ----------------
@@ -70,7 +68,7 @@ function updateMatchStatus() {
   matchStatusSpan.textContent = ok ? "✅ guessed right!" : "❌ not the same";
 }
 
-// Snapshot (weiß)
+// Snapshot
 function snapshot() {
   const tmp = document.createElement("canvas");
   tmp.width = canvas.width;
@@ -87,7 +85,7 @@ function snapshot() {
 // ---------------- Prompt vom Backend ----------------
 async function loadPrompt() {
   try {
-    const res = await fetch("http://127.0.0.1:8001/random_prompt");
+    const res = await fetch("http://127.0.0.1:8004/random_prompt");
     const data = await res.json();
     currentPromptWord = data.word ?? null;
     promptWordSpan.textContent = currentPromptWord ?? "–";
@@ -122,13 +120,11 @@ canvas.addEventListener("mousemove", (e) => {
   const x = e.clientX - r.left;
   const y = e.clientY - r.top;
 
-  // ✅ immer zeichnen (Mode entscheidet, ob malen oder löschen)
   ctx.lineTo(x, y);
   ctx.stroke();
   ctx.beginPath();
   ctx.moveTo(x, y);
 
-  // 🤖 optional live
   if (!liveEnabled) return;
 
   const now = Date.now();
@@ -151,14 +147,14 @@ toggleLiveBtn.onclick = () => {
   toggleLiveBtn.textContent = liveEnabled ? "👁 Live: ON" : "👁 Live: OFF";
 };
 
-// Eraser Toggle (Button wechselt Text)
+// Eraser Toggle
 eraserBtn.onclick = () => {
   if (drawMode === "eraser") {
     setPen();
-    eraserBtn.textContent = "🧽 Radiergummi";
+    eraserBtn.textContent = "🧽 Eraser";
   } else {
     setEraser();
-    eraserBtn.textContent = "✏️ Stift";
+    eraserBtn.textContent = "✏️ Pen";
   }
 };
 
@@ -178,9 +174,9 @@ clearBtn.onclick = () => {
 
   matchStatusSpan.textContent = "–";
 
-  // zurück zum Stift + neues Prompt
+
   setPen();
-  eraserBtn.textContent = "🧽 Radiergummi";
+  eraserBtn.textContent = "🧽 Eraser";
   loadPrompt();
 };
 
@@ -197,7 +193,7 @@ predictBtn.onclick = async () => {
     const fd = new FormData();
     fd.append("image_base64", img);
 
-    const res = await fetch("http://127.0.0.1:8001/predict", {
+    const res = await fetch("http://127.0.0.1:8004/predict", {
       method: "POST",
       body: fd
     });
@@ -247,7 +243,7 @@ async function livePredict() {
     const fd = new FormData();
     fd.append("image_base64", img);
 
-    const res = await fetch("http://127.0.0.1:8001/predict", {
+    const res = await fetch("http://127.0.0.1:8004/predict", {
       method: "POST",
       body: fd
     });
@@ -332,7 +328,6 @@ function addToGallery(e) {
 
   wrap.append(img, cap, conf, del);
 
-  // neue Bilder nach rechts
   galleryDiv.appendChild(wrap);
 }
 

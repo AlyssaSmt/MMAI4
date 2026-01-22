@@ -1,15 +1,16 @@
-# Core ML
-torch
-torchvision
-open_clip_torch
+# Core
+numpy
+pillow
 
 # Backend
 fastapi
 uvicorn
-
-# Image handling
-pillow
-
-# Utils
-numpy
 python-multipart
+
+# OpenCLIP / PyTorch
+torch
+torchvision
+open-clip-torch
+
+# Utilities
+tqdm

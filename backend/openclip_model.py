@@ -25,30 +25,24 @@ class OpenVocabCLIP:
         self.templates = templates
         self.prompts = build_prompts(self.words, templates=self.templates)
 
-        # Build mapping prompt_index -> word_index
         self.prompt_to_word = []
         for wi in range(len(self.words)):
             for _ in self.templates:
                 self.prompt_to_word.append(wi)
 
-        # Cache text embeddings once
         with torch.no_grad():
             tokens = self.tokenizer(self.prompts).to(self.device)
             text_features = self.model.encode_text(tokens)
             text_features = text_features / text_features.norm(dim=-1, keepdim=True)
-        self.text_features = text_features  # (num_prompts, dim)
+        self.text_features = text_features 
 
     @torch.no_grad()
     def predict(self, image_tensor: torch.Tensor, top_k: int = 5):
-        # image_tensor: (1, 3, H, W) already preprocessed
         image_features = self.model.encode_image(image_tensor.to(self.device))
         image_features = image_features / image_features.norm(dim=-1, keepdim=True)
 
-        # cosine similarity
-        sims = (image_features @ self.text_features.T).squeeze(0)  # (num_prompts,)
+        sims = (image_features @ self.text_features.T).squeeze(0)
 
-        # Aggregate prompt scores -> per word
-        # take max over templates per word (often better than mean)
         word_scores = torch.full((len(self.words),), -1e9, device=self.device)
         for pi, wi in enumerate(self.prompt_to_word):
             word_scores[wi] = torch.maximum(word_scores[wi], sims[pi])
